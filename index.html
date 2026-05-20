@@ -3,76 +3,74 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>How It Works</title>
+  <title>Arvo</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Blinker:wght@100;200;300;400;600;700;800;900&family=Forum&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
 </head>
-<body>
+<body class="home">
 
-  <section id="how-it-works">
-    <div class="container">
+  <nav id="site-nav">
+    <a href="index.html" class="nav__brand">Arvo</a>
+    <ul class="nav__links">
+      <li><a href="index.html" class="active">Home</a></li>
+      <li><a href="how-it-works.html">How It Works</a></li>
+    </ul>
+  </nav>
 
-      <div class="step">
-        <div class="step__text">
-          <span class="step__label">Step 0: The Sourcing Engine</span>
-          <h2>Thousands analyzed.<br>Few Selected.</h2>
-          <p>We scan thousands of listings and speak with hundreds of realtors to find properties with real potential. When we negotiate below market value, we split the savings 50/50 with you.</p>
-        </div>
-        <div class="step__media">
-          <video src="assets/ARVO_WS_THOUSANDS-ANALYZED-FEW-SELECTED.webm" autoplay loop muted playsinline></video>
-        </div>
+  <section id="hero">
+
+    <!-- hero copy (commented out for client preview)
+    <div class="hero__copy">
+      <h1 class="hero__headline">
+        Real Estate<br>
+        In Every <img class="hero__icon" src="assets/arvo-icon.svg" alt=""> Pocket
+      </h1>
+      <p class="hero__sub">
+        Build wealth you can rely on<br>
+        <span class="hero__accent">start with just</span> <span class="hero__dollar">$100</span>
+      </p>
+      <a href="#" class="hero__cta">Start Investing</a>
+      <div class="hero__stores">
+        <a href="#" class="store-btn">
+          <svg class="store-btn__icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M3.18 23.76c.36.2.78.22 1.16.06L16.4 12 12.6 8.2 3.18 23.76z" fill="#EA4335"/>
+            <path d="M20.94 10.28L17.8 8.48 13.72 12l4.08 4.08 3.14-1.8a1.65 1.65 0 000-2.8z" fill="#FBBC05"/>
+            <path d="M4.34.18C3.96.02 3.54.04 3.18.28L12.6 9.8l3.8-3.8L4.34.18z" fill="#4285F4"/>
+            <path d="M3.18.28A1.65 1.65 0 002 1.82v20.36c0 .64.36 1.2.94 1.54v.04L12.6 14.2l-9.42-13.9v-.02z" fill="#34A853"/>
+          </svg>
+          <span class="store-btn__text">
+            <span class="store-btn__label">GET IT ON</span>
+            <span class="store-btn__name">Google Play</span>
+          </span>
+        </a>
+        <a href="#" class="store-btn">
+          <svg class="store-btn__icon" viewBox="0 0 24 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M20.08 14.84c-.02-3.18 2.6-4.72 2.72-4.8-1.48-2.16-3.78-2.46-4.6-2.5-1.96-.2-3.84 1.16-4.84 1.16-1 0-2.54-1.14-4.18-1.1-2.14.04-4.12 1.24-5.22 3.14C1.7 14.7 3.34 20.98 5.6 24.4c1.12 1.62 2.46 3.44 4.22 3.38 1.7-.06 2.34-1.1 4.4-1.1 2.04 0 2.62 1.1 4.4 1.06 1.82-.04 2.98-1.64 4.1-3.28a14.1 14.1 0 001.86-3.78c-.04-.02-3.48-1.34-3.5-5.84zm-3.28-10.72c.9-1.12 1.52-2.66 1.36-4.2-1.32.06-2.96.9-3.9 2-.86.96-1.62 2.54-1.42 4.04 1.48.1 2.98-.76 3.96-1.84z" fill="white"/>
+          </svg>
+          <span class="store-btn__text">
+            <span class="store-btn__label">Download on the</span>
+            <span class="store-btn__name">App Store</span>
+          </span>
+        </a>
       </div>
-
-      <div class="step step--reverse">
-        <div class="step__text">
-          <span class="step__label">Step 1: Unfiltered Clarity</span>
-          <h2>See what we see.</h2>
-          <p>Explore vetted properties with full transparency. Access independent valuations, financial breakdowns, and clear risk assessments to make informed decisions.</p>
-        </div>
-        <div class="step__media">
-          <video src="assets/ARVO-WS_SEE-WHAT-WE-SEE.webm" autoplay loop muted playsinline></video>
-        </div>
-      </div>
-
-      <div class="step">
-        <div class="step__text">
-          <span class="step__label">Step 2: Seamless Ownership</span>
-          <h2>Your stake<br>in the city.</h2>
-          <p>Start investing from just $100. Your ownership is held in a secure SPV and digitally recorded in the DIFC public register with real-time access.</p>
-        </div>
-        <div class="step__media">
-          <video src="assets/ARVO_WS_YOUR-STAKE-IN-THE-CITY.webm" autoplay loop muted playsinline></video>
-        </div>
-      </div>
-
-      <div class="step step--reverse">
-        <div class="step__text">
-          <span class="step__label">Step 3: Earn from Rental Income and Value Growth</span>
-          <h2>The rewards of ownership.</h2>
-          <p>We handle tenant management, maintenance, and administration. You receive your share of rental income, less applicable fees, directly in your Arvo wallet.</p>
-        </div>
-        <div class="step__media">
-          <video src="assets/ARVO_WS_THE-REWARDS-OF-OWNERSHIP.webm" autoplay loop muted playsinline></video>
-        </div>
-      </div>
-
-      <div class="step">
-        <div class="step__text">
-          <span class="step__label">Step 4: Flexible Exit Options</span>
-          <h2>Your exit,<br>your terms.</h2>
-          <p>Real estate is usually illiquid, but we aim to change that. Sell your shares during bi-annual exit windows, subject to demand, or hold long-term for potential growth.</p>
-        </div>
-        <div class="step__media">
-          <video src="assets/ARVO_WS_YOUR-EXIT-YOUR-TERMS.webm" autoplay loop muted playsinline></video>
-        </div>
-      </div>
-
     </div>
+    -->
+
+    <div class="phones-group">
+      <div class="phone phone--left">
+        <video src="assets/hero-iphones/Top Up Wallet - Demo (MOCKED i14).webm" autoplay loop muted playsinline></video>
+      </div>
+      <div class="phone phone--center">
+        <video src="assets/hero-iphones/Catalogue - Demo (MOCKED i14).webm" autoplay loop muted playsinline></video>
+      </div>
+      <div class="phone phone--right">
+        <video src="assets/hero-iphones/Funded Property - Demo (MOCKED i14).webm" autoplay loop muted playsinline></video>
+      </div>
+    </div>
+
   </section>
 
-  <script src="https://unpkg.com/lenis@1.1.14/dist/lenis.min.js"></script>
-  <script src="main.js" defer></script>
 </body>
 </html>

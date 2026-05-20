@@ -11,6 +11,247 @@ body {
   line-height: 1.6;
 }
 
+/* ── Nav ── */
+#site-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 28px 40px;
+}
+
+.nav__brand {
+  font-family: 'Forum', serif;
+  font-size: 1.5rem;
+  text-decoration: none;
+  color: inherit;
+  letter-spacing: 0.02em;
+}
+
+.nav__links {
+  list-style: none;
+  display: flex;
+  gap: 40px;
+}
+
+.nav__links a {
+  font-family: 'Blinker', sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  text-decoration: none;
+  color: inherit;
+  opacity: 0.45;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  transition: opacity 0.2s ease;
+}
+
+.nav__links a:hover,
+.nav__links a.active {
+  opacity: 1;
+}
+
+/* ── Homepage ── */
+body.home {
+  background: #000;
+  color: #fff;
+  overflow: hidden;
+}
+
+#hero {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  background-image: url('assets/hero-sky-scrappers.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* ── Hero gradient overlay ── */
+#hero::before {
+  content: '';
+  position: absolute;
+  inset: 0 0 auto 0;
+  height: 50%;
+  background: linear-gradient(to bottom, rgba(255,255,255,0.5), rgba(255,255,255,0));
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* ── Hero copy ── */
+.hero__copy {
+  position: absolute;
+  top: clamp(100px, 16.7vh, 188px);
+  left: 50%;
+  transform: translateX(-50%);
+  width: min(1206px, 90vw);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: clamp(16px, 2vw, 28px);
+  z-index: 10;
+  text-align: center;
+}
+
+.hero__headline {
+  font-family: 'Forum', serif;
+  font-size: clamp(44px, 6.67vw, 96px);
+  font-weight: 400;
+  color: #32302f;
+  line-height: 0.88;
+  letter-spacing: -0.03em;
+  text-transform: capitalize;
+}
+
+.hero__icon {
+  display: inline-block;
+  width: clamp(40px, 6.04vw, 87px);
+  height: clamp(40px, 6.04vw, 87px);
+  vertical-align: middle;
+  position: relative;
+  top: -0.04em;
+  transform: rotate(6.61deg);
+}
+
+.hero__sub {
+  font-family: 'Blinker', sans-serif;
+  font-size: clamp(15px, 1.84vw, 26.5px);
+  font-weight: 400;
+  color: #111;
+  line-height: 1.3;
+}
+
+.hero__accent {
+  color: #ee4f00;
+}
+
+.hero__dollar {
+  font-family: 'Rock Salt', cursive;
+  font-size: clamp(16px, 1.94vw, 28px);
+  color: #ee4f00;
+}
+
+.hero__cta {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #ee4f00;
+  color: #faf9f8;
+  font-family: 'Blinker', sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  text-decoration: none;
+  width: 246px;
+  height: 40px;
+  border-radius: 6px;
+  transition: opacity 0.2s ease;
+}
+
+.hero__cta:hover {
+  opacity: 0.88;
+}
+
+.hero__stores {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.store-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: #000;
+  border: 1px solid #a6a6a6;
+  border-radius: 6px;
+  width: 120px;
+  height: 40px;
+  padding: 0 7px;
+  text-decoration: none;
+  color: #fff;
+  flex-shrink: 0;
+}
+
+.store-btn__icon {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+  object-fit: contain;
+}
+
+.store-btn__text {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.store-btn__label {
+  font-family: 'Blinker', sans-serif;
+  font-size: 8px;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  line-height: 1;
+  color: #fff;
+  white-space: nowrap;
+}
+
+.store-btn__name {
+  font-family: 'Blinker', sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 1;
+  color: #fff;
+  white-space: nowrap;
+}
+
+/* ── Phone mockups ── */
+.phones-group {
+  position: absolute;
+  top: 48%;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.phone {
+  flex-shrink: 0;
+}
+
+.phone video {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.phone--center {
+  width: 260px;
+  z-index: 2;
+  position: relative;
+}
+
+.phone--left {
+  width: 220px;
+  z-index: 1;
+  margin-top: 40px;
+  margin-right: -60px;
+}
+
+.phone--right {
+  width: 220px;
+  z-index: 1;
+  margin-top: 40px;
+  margin-left: -60px;
+}
+
 #how-it-works {
   padding: 0 24px;
 }

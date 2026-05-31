@@ -348,6 +348,7 @@ body.characters {
   position: relative;
   width: 100%;
   height: 100vh;
+  height: 100dvh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -615,7 +616,7 @@ body.characters {
   }
 
   .char-footer {
-    padding: 14px 0 28px;
+    padding: 14px 0 max(28px, env(safe-area-inset-bottom) + 12px);
     gap: 14px;
   }
 

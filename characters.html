@@ -29,19 +29,19 @@
 
     <div class="char-stage">
       <video class="char-video active" autoplay loop muted playsinline>
-      <source src="assets/Characters/MOV/The Dreamer - ALPHA.mov" type="video/quicktime; codecs=hvc1">
+      <source src="assets/Characters/MOV/The Dreamer - ALPHA.mov" type="video/quicktime">
       <source src="assets/Characters/WEBM/The Dreamer - ALPHA.webm" type="video/webm">
     </video>
       <video class="char-video" autoplay loop muted playsinline>
-      <source src="assets/Characters/MOV/The Saver - ALPHA.mov" type="video/quicktime; codecs=hvc1">
+      <source src="assets/Characters/MOV/The Saver - ALPHA.mov" type="video/quicktime">
       <source src="assets/Characters/WEBM/The Saver - ALPHA.webm" type="video/webm">
     </video>
       <video class="char-video" autoplay loop muted playsinline>
-      <source src="assets/Characters/MOV/The Investor - ALPHA.mov" type="video/quicktime; codecs=hvc1">
+      <source src="assets/Characters/MOV/The Investor - ALPHA.mov" type="video/quicktime">
       <source src="assets/Characters/WEBM/The Investor - ALPHA.webm" type="video/webm">
     </video>
       <video class="char-video" autoplay loop muted playsinline>
-      <source src="assets/Characters/MOV/The Provider - ALPHA.mov" type="video/quicktime; codecs=hvc1">
+      <source src="assets/Characters/MOV/The Provider - ALPHA.mov" type="video/quicktime">
       <source src="assets/Characters/WEBM/The Provider - ALPHA.webm" type="video/webm">
     </video>
     </div>
@@ -74,6 +74,9 @@
     const names = ['The Dreamer', 'The Saver', 'The Investor', 'The Provider'];
     const videos = document.querySelectorAll('.char-video');
     const dots   = document.querySelectorAll('.char-dot');
+
+    // iOS Safari requires explicit play() for autoplay with <source> tags
+    videos.forEach(v => v.play().catch(() => {}));
     const nameEl = document.getElementById('char-name');
     let current  = 0;
 
@@ -83,6 +86,7 @@
       current = ((index % names.length) + names.length) % names.length;
       videos[current].classList.add('active');
       dots[current].classList.add('active');
+      videos[current].play().catch(() => {});
       nameEl.style.opacity = '0';
       setTimeout(() => {
         nameEl.textContent = names[current];
